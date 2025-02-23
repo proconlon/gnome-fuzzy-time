@@ -1,4 +1,5 @@
-TARGET = "panel-date-format@keiii.github.com.zip"
+# Not currently being compiled for GNOME Extensions website
+TARGET = "fuzzy-time@proconlon.zip"
 
 DIST_FILES = \
 	schemas/ \

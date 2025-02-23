@@ -1,19 +1,59 @@
-# Panel Date Format extension for Gnome Shell
+# Fuzzy Time Extension for GNOME Shell
 
-Allows to customize the date format on the panel.
+Take a more relaxed approach to life! Have no idea what time it is! It's pretentious because it's in lowercase!!!
 
 ![screenshot](./screenshot.png?raw=true)
 
-## Changing format
+This extension replaces your GNOME Shell clock with a **fuzzy time** display.  
+Instead of precise numbers, you'll see "human-friendly" phrases like: _quarter past ten_ instead of _10:17_.
 
-You can use dconf Editor to change format. Or simply from the terminal:
+| Time         | Fuzzy Time       |
+|--------------|------------------|
+| **12:00 AM** | `midnight`       |
+| **12:03 AM** | `five past 12`   |
+| **12:00 PM** | `noon`           |
+| **12:46 PM** | `quarter to 1`   |
+| **11:00 PM** | `11 o'clock`     |
+
+
+## **Installation Instructions**
+
+### **1. Clone the Repository**
+Run the following command to install the extension manually:
 
 ```sh
-dconf write /org/gnome/shell/extensions/panel-date-format/format "'%Y-%m-%d'"
+git clone https://github.com/proconlon/gnome-fuzzy-time.git ~/.local/share/gnome-shell/extensions/fuzzy-time@proconlon
 ```
 
-The format strings understood by this function are a subset of the `strftime()`. [The following format specifiers are supported](https://docs.gtk.org/glib/method.DateTime.format.html).
+### **2. Compile the GSettings Schema**
+The schema file (`schemas/org.gnome.shell.extensions.fuzzy-time.gschema.xml`) must be compiled to be used by GNOME Shell:
 
-## Installation
+```sh
+glib-compile-schemas ~/.local/share/gnome-shell/extensions/fuzzy-time@proconlon/schemas/
+```
 
-This repository for developers only. If you wanna add this extension to your desktop, get it from [extensions.gnome.org]( https://extensions.gnome.org/extension/1462/panel-date-format/).
+### **3. Enable the Extension**
+
+Log out and log back in to restart GNOME Shell, then enable the extension with:
+
+```sh
+gnome-extensions enable fuzzy-time@proconlon
+```
+
+It will probably appear in **GNOME Tweaks** or **Extensions** under the name **Fuzzy Time**.
+
+All set! Now you can tell time like an annoying person!
+
+## **Uninstalling**
+To remove the extension, run:
+
+```sh
+gnome-extensions disable fuzzy-time@proconlon
+rm -rf ~/.local/share/gnome-shell/extensions/fuzzy-time@proconlon
+```
+
+---
+
+This is a modified fork of the **[Panel Date Format extension](https://extensions.gnome.org/extension/1462/panel-date-format/)**.
+
+

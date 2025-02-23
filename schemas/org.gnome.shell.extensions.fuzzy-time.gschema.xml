@@ -1,5 +1,5 @@
 <schemalist>
-  <schema id="org.gnome.shell.extensions.panel-date-format" path="/org/gnome/shell/extensions/panel-date-format/">
+  <schema id="org.gnome.shell.extensions.fuzzy-time" path="/org/gnome/shell/extensions/fuzzy-time/">
     <key name="format" type="s">
       <default>""</default>
       <summary>Format</summary>

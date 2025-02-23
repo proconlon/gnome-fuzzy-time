@@ -1,9 +1,9 @@
 {
-  "uuid": "panel-date-format@keiii.github.com",
-  "name": "Panel Date Format",
-  "description": "Allows to customize the date format on the panel.",
-  "url": "https://github.com/KEIII/gnome-shell-panel-date-format",
+  "uuid": "fuzzy-time@proconlon",
+  "name": "Fuzzy Time",
+  "description": "Fuzzy clock for GNOME shell.",
+  "url": "https://github.com/proconlon/gnome-fuzzy-time",
   "shell-version": ["45", "46", "47"],
-  "settings-schema": "org.gnome.shell.extensions.panel-date-format",
+  "settings-schema": "org.gnome.shell.extensions.fuzzy-time",
   "version": 3
 }
